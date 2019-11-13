@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 
-// import { Container } from './styles';
+import api from "../../services/api";
+
+import { Container, Title, Search } from "./styles";
 
 export default class Home extends Component {
+  componentDidMount() {
+    api.get(`forecastrss?location=aracaju,br`);
+  }
+
   render() {
     return (
       <>
-        <div className="">
-          <h1>Previsão do tempo</h1>
-          <input type="text" name="" id="" />
+        <Container>
+          <Title>Previsão do tempo</Title>
+          <Search type="text" name="" id="" />
           <div className="">
             <h2>Capitais</h2>
             <div></div>
           </div>
-        </div>
+        </Container>
       </>
     );
   }
