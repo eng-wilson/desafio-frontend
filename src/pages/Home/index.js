@@ -11,6 +11,7 @@ export default class Home extends Component {
           <input type="text" name="" id="" />
           <div className="">
             <h2>Capitais</h2>
+            <div></div>
           </div>
         </div>
       </>
