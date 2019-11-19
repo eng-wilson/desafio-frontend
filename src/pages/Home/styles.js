@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   color: #fff;
-  font-size: 64px;
+  font-size: 56px;
 `;
 
 export const SubTitle = styled.h1`
@@ -20,7 +20,7 @@ export const SubTitle = styled.h1`
 
 export const HeaderContainer = styled.div`
   min-height: 40%;
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -31,7 +31,7 @@ export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 70%;
+  min-width: 30%;
   height: 40px;
 `;
 
@@ -42,9 +42,13 @@ export const SearchInput = styled.input`
 `;
 
 export const CitiesContainer = styled.div`
-  width: 30%;
-
+  width: 40%;
   border-top: 1px solid #fff;
-
   padding: 20px 50px;
+`;
+
+export const TableContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
