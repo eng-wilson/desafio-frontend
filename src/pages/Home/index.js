@@ -6,11 +6,8 @@ import api from "../../services/api";
 import {
   Container,
   HeaderContainer,
-  Title,
   SearchContainer,
-  SearchInput,
   CitiesContainer,
-  SubTitle,
   TableContainer
 } from "./styles";
 
@@ -37,10 +34,10 @@ export default class Home extends Component {
       <>
         <Container>
           <HeaderContainer>
-            <Title>Previsão do tempo</Title>
+            <h1>Previsão do tempo</h1>
 
             <SearchContainer>
-              <SearchInput
+              <input
                 type="text"
                 name=""
                 id=""
@@ -51,7 +48,7 @@ export default class Home extends Component {
           </HeaderContainer>
 
           <CitiesContainer>
-            <SubTitle>Capitais</SubTitle>
+            <h2>Capitais</h2>
             <TableContainer>
               <table>
                 <tr>

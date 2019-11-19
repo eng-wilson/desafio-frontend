@@ -8,16 +8,6 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.h1`
-  color: #fff;
-  font-size: 56px;
-`;
-
-export const SubTitle = styled.h1`
-  color: #fff;
-  font-size: 36px;
-`;
-
 export const HeaderContainer = styled.div`
   min-height: 40%;
   width: 100%;
@@ -25,6 +15,11 @@ export const HeaderContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  h1 {
+    color: #fff;
+    font-size: 56px;
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -33,22 +28,35 @@ export const SearchContainer = styled.div`
   justify-content: center;
   min-width: 30%;
   height: 40px;
-`;
 
-export const SearchInput = styled.input`
-  width: 100%;
-  height: 100%;
-  padding: 20px 15px;
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+  }
 `;
 
 export const CitiesContainer = styled.div`
   width: 40%;
   border-top: 1px solid #fff;
   padding: 20px 50px;
+
+  h2 {
+    color: #fff;
+    font-size: 36px;
+  }
 `;
 
 export const TableContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  table {
+    tr,
+    th,
+    td {
+      text-align: center;
+    }
+  }
 `;
