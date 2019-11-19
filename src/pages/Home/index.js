@@ -31,59 +31,37 @@ export default class Home extends Component {
 
     console.log(cities);
     return (
-      <>
-        <Container>
-          <HeaderContainer>
-            <h1>Previsão do tempo</h1>
+      <Container>
+        <HeaderContainer>
+          <h1>Previsão do tempo</h1>
 
-            <SearchContainer>
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Insira aqui o nome da cidade"
-              />
-              <MdSearch />
-            </SearchContainer>
-          </HeaderContainer>
+          <SearchContainer>
+            <input type="text" placeholder="Insira aqui o nome da cidade" />
+            <a>
+              <MdSearch size={32} />
+            </a>
+          </SearchContainer>
+        </HeaderContainer>
 
-          <CitiesContainer>
-            <h2>Capitais</h2>
-            <TableContainer>
-              <table>
-                <tr>
-                  <th>Min</th>
-                  <th>Máx</th>
+        <CitiesContainer>
+          <h2>Capitais</h2>
+          <TableContainer>
+            <table>
+              <tr>
+                <th>Min</th>
+                <th>Máx</th>
+              </tr>
+              {cities.map(city => (
+                <tr key={city.location.city}>
+                  <td>{city.forecasts[0].low}</td>
+                  <td>{city.forecasts[0].high}</td>
+                  <td>{city.location.city}</td>
                 </tr>
-                {cities.map(city => (
-                  <tr key={city.location.city}>
-                    <td>{city.forecasts[0].low}</td>
-                    <td>{city.forecasts[0].high}</td>
-                    <td>{city.location.city}</td>
-                  </tr>
-                ))}
-              </table>
-
-              {/* <table>
-                <tr>
-                  <th>Min</th>
-                  <th>Máx</th>
-                </tr>
-                <tr>
-                  <td>Jill</td>
-                  <td>Smith</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>Eve</td>
-                  <td>Jackson</td>
-                  <td>94</td>
-                </tr>
-              </table> */}
-            </TableContainer>
-          </CitiesContainer>
-        </Container>
-      </>
+              ))}
+            </table>
+          </TableContainer>
+        </CitiesContainer>
+      </Container>
     );
   }
 }

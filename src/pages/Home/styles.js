@@ -23,16 +23,27 @@ export const HeaderContainer = styled.div`
 `;
 
 export const SearchContainer = styled.div`
+  width: 20%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  min-width: 30%;
-  height: 40px;
+  align-items: center;
+  background: transparent;
+  background-color: #fff;
+  padding: 2px 10px;
 
   input {
+    display: flex;
     width: 100%;
-    height: 100%;
-    padding: 20px 15px;
+    padding-top: 10;
+    padding-right: 10;
+    padding-bottom: 10;
+    padding-left: 0;
+    border: 0;
+    background-color: #fff;
+    color: #424242;
+    height: 40px;
+    font-size: 18px;
   }
 `;
 
